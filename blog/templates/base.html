@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{% block stylesheet %}{% endblock %}">
+    <meta name="author" content="{% block author %}{% endblock %}" />
+    <meta name="description" content="{% block description %}{% endblock %}">
+    <meta name="keywords" content="{% block keywords %}{% endblock %}">
+    <title>{% block title %}{% endblock %}</title>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(["_setAccount", "UA-32210871-1"]); _gaq.push(["_trackPageview"]);
+    (function() {
+        var ga = document.createElement("script");
+        ga.type = "text/javascript"; ga.async = true;
+        ga.src = ("https:" == document.location.protocol ? "https://ssl"
+        : "http://www") + ".google-analytics.com/ga.js";
+        var s = document.getElementsByTagName("script")[0];'
+        's.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </head>
+  <body>
+    <nav><a href="/" class="logo">0xKirill</a><a href="/about">About</a></nav>
+    {% block body %}{% endblock %}
+  </body>
+</html>

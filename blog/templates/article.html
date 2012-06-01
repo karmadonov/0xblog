@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block stylesheet %}/static/main.css{% endblock %}
+{% block author %}0xKirill{% endblock %}
+{% block description %}{{ article.description }}{% endblock %}
+{% block keywords %}
+  {% for keyword in article.keywords%}{{ keyword }}, {% endfor %}
+{% endblock %}
+{% block title %}{{ article.title }}{% endblock %}
+{% block body %}
+  <section class="article">
+    <article>
+      <div class="time">{{ article.created|date:'Y-m-d' }}</div>
+      <h1 class="title">{{ article.title }}</h1>
+      <div class="text">{{ article.content }}</div>
+    </article>
+  </section>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block stylesheet %}/static/main.css{% endblock %}
+{% block author %}0xKirill{% endblock %}
+{% block description %}0xKirill::Blog about Python, Math, Life{% endblock %}
+{% block keywords %}0xKirill, Kirill, Python, Math{% endblock %}
+{% block title %}0xKirill::Blog{% endblock %}
+{% block body %}
+  <section class="blog">
+    {% for article in articles %}
+      <article>
+        <div class="time">{{ article.created|date:'Y-m-d' }}</div>
+        <h1 class="title"><a href="{{ article.key.name }}">{{ article.title }}</a></h1>
+        <div class="description">{{ article.description }}</div>
+      </article>
+    {% endfor %}
+  </section>
+{% endblock %}
